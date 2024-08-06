@@ -1,0 +1,28 @@
+
+
+.container{
+    display:flex;
+    z-index:1;
+    flex-direction:row;
+    justify-content:center;
+    position:fixed;
+    height:80px;
+    background-color: #ffff;
+    width:100%;
+   box-shadow:5px 0px 5px 5px rgb(31, 28, 28);
+    
+}
+.headers{
+
+    display:flex;
+    align-items:center;
+    align-self: center;
+    gap:30px;
+    margin:12px;
+    margin-top:10px;
+   
+}
+#elements{
+    font-weight:700;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
