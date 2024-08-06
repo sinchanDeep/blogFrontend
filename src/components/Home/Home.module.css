@@ -56,3 +56,11 @@
         padding-top:0px;
     }
 }
+#img{
+  
+    @media(min-width:600px)
+    {
+        margin-left: -5px;;
+    width:300px;
+    }
+}

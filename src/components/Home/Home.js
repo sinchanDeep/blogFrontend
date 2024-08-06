@@ -35,7 +35,8 @@ const [img,setImg]=useState("images/logo.png");
       }).then((res)=>{
         allBlogsArr=res.data;
         setImg(res.data.picture);
-        setArr(res.data);
+        setArr(res.data.reverse());
+        
       });     
     }catch(err){console.log("")} 
   },[]);
@@ -75,7 +76,7 @@ const [img,setImg]=useState("images/logo.png");
         </div>
         <div className={homeCss.image}>
           
-          <img src="images/logo.png" className="w-100 h-100" />
+          <img  src="images/logo.png" className="w-100 h-100" />
           <div className={homeCss.textbox}>
           <input className={homeCss.search}  id="searchKey" type="text" placeholder="Enter a blog title to search " style={{width:"230px",textDecoration:"none",border:"none",padding:"5px"}}/>
           <Button variant="outlined" onClick={searchBlog}>Search</Button>
@@ -86,9 +87,9 @@ const [img,setImg]=useState("images/logo.png");
 {arr.map((blog,index)=>(
  
   <div key={index} id={"ids"+index} >
-   <div id={"ids"+index} name="name"  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5 m-5 w-full">
+   <div id={"ids"+index} name="name"  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5 m-5 ml-0 mr-0 md:ml-5 mr-5 w-full">
     <a>
-        <img class="rounded-t-lg self-center" style={{height:"200px",width:"400px"}} src={blog.picture} alt="" />
+        <img id={homeCss.img} class="rounded-t-lg self-center" style={{height:"200px",width:"400px"}} src={blog.picture} alt="" />
     </a>
     <div class="p-5">
         <a href="#">

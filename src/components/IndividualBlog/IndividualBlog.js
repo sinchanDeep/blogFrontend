@@ -18,7 +18,7 @@ const IndividualBlog = () => {
     axios({
         headers:{"Content-Type":"application/json"},
         method:"POST",
-        url:"http://localhost:5000/api/blog/getIndividualBlog",
+        url:"https://blogbackend-3-ityn.onrender.com/api/blog/getIndividualBlog",
         data:{
             date
         }

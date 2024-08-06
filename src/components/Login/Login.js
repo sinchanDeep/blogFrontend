@@ -29,7 +29,7 @@ const Login = () => {
             axios({
                 headers:{"Content-Type":"application/json"},
                 method:"POST",
-                url:"https://blogbackend-3-ityn.onrender.com//api/blog/login",
+                url:"https://blogbackend-3-ityn.onrender.com/api/blog/login",
                 data:{
                     name,
                     email,
@@ -133,7 +133,9 @@ const Login = () => {
         <div className={loginCss.header}>
             <div className={loginCss.text}>{action}</div>
             <div className={loginCss.underline}></div>
+            
         </div>
+        
         <div className={loginCss.inputs}>
             {action=="Login"?<div></div>:  <div className={loginCss.input}>
                 <img src="images/person.png" />
@@ -150,14 +152,13 @@ const Login = () => {
             </div>
         </div>
         {action=="Sign Up"?<div></div>: <div onClick={forgotPassword} className={loginCss.forgotPassword}>forgot password? <span>Click here</span></div>}
-        
+        <div className="self-center text-center" id="container" style={{color:"red",fontWeight:"700"}}></div>
         <div className={loginCss.submitContainer}>
+       
             <div className={action==="Login"?loginCss.submit+" "+loginCss.gray:loginCss.submit} onClick={()=>{setAction("Sign Up"); saveInfo();}}>Sign up</div>
             <div className={action==="Sign Up"?loginCss.submit+" "+loginCss.gray:loginCss.submit} onClick={()=>{setAction("Login"); login();}}>Login</div>
         </div>
-        <div className="self-center" id="container" style={{color:"red",fontWeight:"700"}}>
-           
-        </div>
+        
     </div>
   )
 }
