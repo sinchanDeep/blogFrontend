@@ -135,7 +135,7 @@ const MyBlogs =  () => {
                     name
                 }
             }).then((res)=>{
-                alert("your blog has been saved");
+                alert("your blog has been saved successfully");
                 navigate("/");
             })
         }catch(err)
