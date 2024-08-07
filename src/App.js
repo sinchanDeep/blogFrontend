@@ -17,11 +17,11 @@ function App() {
       <Routes>
        
         <Route path="/" element={<Home/>}/>
-        <Route path="https://blogbackend-3-ityn.onrender.com/Login" element={<Login/>}/>
-        <Route path="https://blogbackend-3-ityn.onrender.com/Home" element={<Home/>}/>
-        <Route path="https://blogbackend-3-ityn.onrender.com/myBlogs" element={<MyBlogs/>}/>
-        <Route path="https://blogbackend-3-ityn.onrender.com/Individual" element={<Individual/>}/>
-        <Route path="https://blogbackend-3-ityn.onrender.com/forgotPassword" element={<ForgotPassword/>}/>
+        <Route path="https://blogliteapp.netlify.app/Login" element={<Login/>}/>
+        <Route path="https://blogliteapp.netlify.app/Home" element={<Home/>}/>
+        <Route path="https://blogliteapp.netlify.app/myBlogs" element={<MyBlogs/>}/>
+        <Route path="https://blogliteapp.netlify.app/Individual" element={<Individual/>}/>
+        <Route path="https://blogliteapp.netlify.app/forgotPassword" element={<ForgotPassword/>}/>
       </Routes>
    </BrowserRouter>
    </>
