@@ -136,8 +136,8 @@ const MyBlogs =  () => {
                 }
             }).then((res)=>{
                 alert("your blog has been saved successfully");
-                //navigate("/");
-                window.location.reload();
+                navigate("/");
+                //window.location.reload();
             })
         }catch(err)
         {
