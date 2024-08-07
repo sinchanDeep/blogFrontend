@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="flex flex-row gap-5" id={navCss.elements}>
             <div onClick={openMyBlogs} style={{cursor:"pointer"}}>My Blogs</div>
             <Link to="/">Home</Link>
-            {login==="logged"?<div  style={{cursor:"pointer"}} onClick={logOut}>Log Out</div>:<div  style={{cursor:"pointer"}} onClick={()=>{navigate("Login")}} >Login/Register</div>}
+            {login==="logged"?<div  style={{cursor:"pointer"}} onClick={logOut}>Log Out</div>:<div  style={{cursor:"pointer"}} onClick={()=>{navigate("/Login")}} >Login/Register</div>}
           </div>
           <div className="flex flex-row gap-2">
            
