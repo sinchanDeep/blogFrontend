@@ -17,11 +17,11 @@ function App() {
       <Routes>
        
         <Route path="/" element={<Home/>}/>
-        <Route path="https://blogliteapp.netlify.app/Login" element={<Login/>}/>
-        <Route path="https://blogliteapp.netlify.app/Home" element={<Home/>}/>
-        <Route path="https://blogliteapp.netlify.app/myBlogs" element={<MyBlogs/>}/>
-        <Route path="https://blogliteapp.netlify.app/Individual" element={<Individual/>}/>
-        <Route path="https://blogliteapp.netlify.app/forgotPassword" element={<ForgotPassword/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/Home" element={<Home/>}/>
+        <Route path="/myBlogs" element={<MyBlogs/>}/>
+        <Route path="/Individual" element={<Individual/>}/>
+        <Route path="/forgotPassword" element={<ForgotPassword/>}/>
       </Routes>
    </BrowserRouter>
    </>
