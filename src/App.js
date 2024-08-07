@@ -15,11 +15,11 @@ function App() {
    
    <BrowserRouter>
       <Routes>
-        <Route path="/Login" element={<Login/>}/>
+        <Route path="https://blogbackend-3-ityn.onrender.com/Login" element={<Login/>}/>
         <Route path="/" element={<Home/>}/>
-        <Route path="/myBlogs" element={<MyBlogs/>}/>
-        <Route path="/Individual" element={<Individual/>}/>
-        <Route path="/forgotPassword" element={<ForgotPassword/>}/>
+        <Route path="https://blogbackend-3-ityn.onrender.com/myBlogs" element={<MyBlogs/>}/>
+        <Route path="https://blogbackend-3-ityn.onrender.com/Individual" element={<Individual/>}/>
+        <Route path="https://blogbackend-3-ityn.onrender.com/forgotPassword" element={<ForgotPassword/>}/>
       </Routes>
    </BrowserRouter>
    </>

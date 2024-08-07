@@ -136,7 +136,7 @@ const MyBlogs =  () => {
                 }
             }).then((res)=>{
                 alert("your blog has been saved");
-                navigate("/Home");
+                navigate("/");
             })
         }catch(err)
         {
