@@ -49,6 +49,8 @@ const MyBlogs =  () => {
     useEffect(()=>{
         document.body.className = myBlogCss.homeBody
         var tkn=Cookies.get("jwtToken");
+        if(!tkn)
+            navigate("/Login");
         axios({
             headers:{"Content-Type":"application/json"},
             method:"POST",
@@ -199,7 +201,7 @@ const MyBlogs =  () => {
     <div>
     <Navbar/>
     </div>
-    <Container> 
+    <Container className='bg-inherit'> 
     <img src={file} alt="banner" class={myBlogCss.image}/>
     <StyledFormControl className={myBlogCss.formcontrol}>
         <label htmlFor="fileinput">

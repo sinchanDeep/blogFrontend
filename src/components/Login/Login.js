@@ -59,7 +59,7 @@ const Login = () => {
                     document.cookie = "jwtToken=" + tkn + ";expires=" + now.toUTCString();
                     alert("Login successful");
                     setAction("Login");
-                    navigate("/Home");
+                    navigate("/");
                 } else if (res.data === "wrongPass") {
                     document.getElementById("container").innerHTML = "Wrong password";
                 } else if (res.data === "notExists") {

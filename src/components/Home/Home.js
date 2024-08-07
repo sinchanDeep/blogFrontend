@@ -5,13 +5,18 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Cookies from "js-cookie";
 
 const Home = () => {
   const navigate = useNavigate();
-
+  let tkn;
   const ReadMore = (e) => {
+    if(!Cookies.get("jwtToken"))
+      navigate("/Login");
+    else{
     const id = e.target.id;
     navigate("/Individual", { state: { id: id } });
+    }
   };
 
   let allBlogsArr = [];
@@ -19,6 +24,7 @@ const Home = () => {
   const [img, setImg] = useState("images/logo.png");
 
   useEffect(() => {
+    tkn=Cookies.get("jwtToken");
     try {
       document.body.className = homeCss.homeBody;
       axios({
@@ -60,7 +66,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container mx-auto ">
+      <div className="container mx-auto bg-inherit">
         <div>
           <Navbar />
         </div>
@@ -68,10 +74,10 @@ const Home = () => {
           <img src="images/logo.png" className="w-full h-full object-cover" />
           <div className={homeCss.textbox}>
             <input
-              className="border-none outline-none p-2"
+              className="border-none outline-none p-3"
               id="searchKey"
               type="text"
-              placeholder="Enter a blog title to search"
+              placeholder="Enter a keyword to search"
               style={{ width: "230px", textDecoration: "none" }}
             />
             <Button variant="outlined" onClick={searchBlog}>
