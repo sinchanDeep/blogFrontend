@@ -1,5 +1,4 @@
-body{
-    height:120vh;
+#homeBody{  
     background:linear-gradient(to bottom,#f4f1f1,#f4f1f1,#f4f1f1);
 }
 .container{

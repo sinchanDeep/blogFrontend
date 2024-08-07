@@ -10,8 +10,7 @@
     background-color: #ffff;
     width:100%;
    box-shadow:5px 0px 5px 5px rgb(31, 28, 28);
-   
-    
+   margin-bottom:100px;
 }
 .headers{
     @media(max-width:600px){

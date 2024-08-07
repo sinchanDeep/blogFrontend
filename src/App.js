@@ -15,7 +15,7 @@ function App() {
    
    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login/>}/>
+        <Route path="https://blogbackend-3-ityn.onrender.com" element={<Login/>}/>
         <Route path="/Home" element={<Home/>}/>
         <Route path="/myBlogs" element={<MyBlogs/>}/>
         <Route path="/Individual" element={<Individual/>}/>
