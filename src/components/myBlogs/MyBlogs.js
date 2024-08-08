@@ -54,7 +54,7 @@ const MyBlogs =  () => {
         axios({
             headers:{"Content-Type":"application/json"},
             method:"POST",
-            url:"http://localhost:5000/api/blog/getUsername",
+            url:"https://blogbackend-3-ityn.onrender.com/api/blog/getUsername",
             data:{
                 tkn
             }
@@ -66,7 +66,7 @@ const MyBlogs =  () => {
         axios({
             headers:{"Content-Type":"application/json"},
             method:"POST",
-            url:"http://localhost:5000/api/blog/getUserBlogs",
+            url:"https://blogbackend-3-ityn.onrender.com/api/blog/getUserBlogs",
             data:{
                 name:name
             }
