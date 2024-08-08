@@ -7,7 +7,7 @@ const ForgotPassword = () => {
     const location = useLocation();
     const mail = location.state.mail;
     const ootp = location.state.otp;
-    alert(ootp);
+  
     const reset = async () => {
         const password = document.getElementById("password").value;
         const cpassword = document.getElementById("cpassword").value;
