@@ -46,29 +46,29 @@ const MyBlogs =  () => {
     let [title,setTitle]=useState("");
     let [description,setDescription]=useState("");
     let [userBlogs,setUserBlogs]=useState([]);
+    const tkn=String(Cookies.get("jwtToken"));
     useEffect(()=>{
         document.body.className = myBlogCss.homeBody
-        var tkn=Cookies.get("jwtToken");
         if(!tkn)
             navigate("/Login");
         axios({
             headers:{"Content-Type":"application/json"},
             method:"POST",
-            url:"https://blogbackend-3-ityn.onrender.com/api/blog/getUsername",
+            url:"http://localhost:5000/api/blog/getUsername",
             data:{
-                tkn:Cookies.get("jwtToken")
+                tkn
             }
         }).then((res)=>{
           setName(res.data);      
         });
-    },[chg]);
+    },[]);
     useEffect(()=>{
         axios({
             headers:{"Content-Type":"application/json"},
             method:"POST",
-            url:"https://blogbackend-3-ityn.onrender.com/api/blog/getUserBlogs",
+            url:"http://localhost:5000/api/blog/getUserBlogs",
             data:{
-                name
+                name:name
             }
         }).then((response)=>{
             setUserBlogs(response.data.reverse());

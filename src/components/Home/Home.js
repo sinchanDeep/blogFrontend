@@ -86,7 +86,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-normal">
+        <div className="flex flex-wrap justify-center md:justify-evenly lg:justify-normal">
           {arr.map((blog, index) => (
             <div
               key={index}

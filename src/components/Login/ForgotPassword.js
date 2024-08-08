@@ -7,7 +7,7 @@ const ForgotPassword = () => {
     const location = useLocation();
     const mail = location.state.mail;
     const ootp = location.state.otp;
-
+    alert(ootp);
     const reset = async () => {
         const password = document.getElementById("password").value;
         const cpassword = document.getElementById("cpassword").value;
@@ -19,13 +19,13 @@ const ForgotPassword = () => {
             document.getElementById("message").innerHTML = "<h3 style='color:red;font-size:25px'>Length of the new passwords must be greater than 8</h3>";
         } else if (password !== cpassword) {
             document.getElementById("message").innerHTML = "<h3 style='color:red;font-size:25px'>Passwords must be matching</h3>";
-        } else if (otp === ootp) {
+        } else if (otp == ootp) {
             try {
                 await axios.post("https://blogbackend-3-ityn.onrender.com/api/blog/forgotPassword", { password, cpassword, mail }, {
                     headers: { "Content-Type": "application/json" }
                 });
                 alert("Password has been updated, please login");
-                navigate("/");
+                navigate("/Login");
             } catch (err) {
                 console.log(err);
             }
