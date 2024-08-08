@@ -19,8 +19,8 @@ const Navbar = () => {
   const logOut=()=>{
     if(window.confirm("do you want to logout ?")){
       Cookies.remove("jwtToken");
-      window.location.reload();
       navigate("/");
+      window.location.reload();
     }
   }
   const openMyBlogs=()=>{

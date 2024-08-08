@@ -56,7 +56,7 @@ const MyBlogs =  () => {
             method:"POST",
             url:"https://blogbackend-3-ityn.onrender.com/api/blog/getUsername",
             data:{
-                tkn
+                tkn:Cookies.get("jwtToken")
             }
         }).then((res)=>{
           setName(res.data);      
